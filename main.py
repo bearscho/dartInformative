@@ -7,6 +7,7 @@ from datetime import datetime
 today = datetime.now(timezone('Asia/Seoul'))
 
 kstYMD = today.strftime('%Y%m%d')
+print(kstYMD)
 
 # dart.fss.or.kr 에서 신규시설투자 조회하기
 url = "https://dart.fss.or.kr/dsab007/detailSearch.ax"
