@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+      - cron: "32 0 * * *"
 jobs:
   checkDart:
     runs-on: ubuntu-latest
