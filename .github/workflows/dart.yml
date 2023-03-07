@@ -10,10 +10,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Install the newman command line utility and also install the html extra reporter
-      - name: Install newman
+      # Install library
+      - name: Install lib
         run: |
-          npm install requests
+          pip install requests
+          pip install pytz
+
  
       # Run the Python
       - name: Run the Python
