@@ -1,0 +1,22 @@
+name: Test-Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  checkDart:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Install the newman command line utility and also install the html extra reporter
+      - name: Install newman
+        run: |
+          npm install requests
+ 
+      # Run the Python
+      - name: Run the Python
+        run: |
+          python3 main.py
+     
