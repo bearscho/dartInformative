@@ -1,17 +1,19 @@
 import requests
 import re
 import json
-import datetime
 
-now = datetime.datetime.now()
-formattedDate = now.strftime("%Y%m%d")
-print(formattedDate)
+from pytz import timezone
+from datetime import datetime
+today = datetime.now(timezone('Asia/Seoul'))
+print(today)
+kstYMD = today.strftime('%Y%m%d')
+
 
 url = "https://dart.fss.or.kr/dsab007/detailSearch.ax"
 payload={
     'reportName': '신규시설투자등//신규시설투자등(자율공시)',
-    'startDate' : formattedDate,
-    'endDate' : formattedDate
+    'startDate' : kstYMD,
+    'endDate' : kstYMD
   }
 files=[
 ]
