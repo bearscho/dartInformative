@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-      - cron: '* * * * *'
+      - cron: '30 0,12 * * 1-5'
 jobs:
   checkDart:
     runs-on: ubuntu-latest
