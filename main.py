@@ -5,9 +5,10 @@ import json
 from pytz import timezone
 from datetime import datetime
 today = datetime.now(timezone('Asia/Seoul'))
+
 kstYMD = today.strftime('%Y%m%d')
 
-
+# dart.fss.or.kr 에서 신규시설투자 조회하기
 url = "https://dart.fss.or.kr/dsab007/detailSearch.ax"
 payload={
     'reportName': '신규시설투자등//신규시설투자등(자율공시)',
@@ -23,6 +24,9 @@ response = requests.request("POST", url, headers=headers, data=payload, files=fi
 
 res = response.text
 #print(res)
+
+
+# 조회결과 있는지 정규식으로 추출
 
 pattern = "openReportViewer\('(.*)',''\)"
 a = re.findall(pattern, res)
@@ -42,7 +46,7 @@ for row in a:
   res1 = response1.text
   #print(res1)
 
-
+  # rcpNo , dcmNo 추출
   pattern1 = "viewDoc\('(.*)', '(.*)', '0', '0', '0', 'HTML',''\);"
   b = re.findall(pattern1, res1)
 
@@ -51,6 +55,7 @@ for row in a:
   #print(rcpNo,dcmNo)
 
 
+  # 회사명 추출
 
   pattern2 = "style=\"cursor:pointer;\">(.*)</span></div>"
   c = re.findall(pattern2, res1)
@@ -64,6 +69,7 @@ for row in a:
   #print(reportUrl)
 
 
+  # AWS Lamda slack 연동 호출
 
   url_l = "https://k75n5fmeyederwrh3z5bg3ryry0rqrko.lambda-url.us-east-2.on.aws/"
   notiNm = companyNm + " (신규시설투자등)"
