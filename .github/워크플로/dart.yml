@@ -5,8 +5,8 @@ on:
       - main
   schedule:
       - cron: '30 * * * 1-5'
-cron:
-  checkDart:
+jobs:
+  cron:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
