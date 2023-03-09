@@ -1,7 +1,7 @@
 name: CheckDart
 on:
   schedule:
-    - cron: '20 0-7 * * 1-5'
+    - cron: '20 0-6/2 * * 1-5'
 jobs:
   cron:
     runs-on: ubuntu-latest
