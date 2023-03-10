@@ -32,7 +32,7 @@ today = datetime.now(timezone('Asia/Seoul'))
 
 kstYMD = today.strftime('%Y%m%d')
 print(kstYMD)
-#kstYMD = "20230309"
+#kstYMD = "20230308"
 
 
 searchStrs = ['신규시설투자등//신규시설투자등(자율공시)', '주요사항보고서(무상증자결정)']
@@ -86,6 +86,7 @@ for search in searchStrs:
 
         rcpNo = b[0][0]
         dcmNo = b[0][1]
+        dtd = b[0][2]
         # print(rcpNo,dcmNo)
 
         # 회사명 추출
@@ -102,5 +103,5 @@ for search in searchStrs:
 
         notiNm = companyNm + "-" + search
         notiUrl = "https://dart.fss.or.kr/report/viewer.do?rcpNo=" + \
-            rcpNo + "&dcmNo=" + dcmNo + "&eleId=0&offset=0&length=0&dtd=HTML"
+            rcpNo + "&dcmNo=" + dcmNo + "&eleId=0&offset=0&length=0&dtd=" + dtd
         callAWSLamdaSlack(notiNm, notiUrl)
