@@ -1,6 +1,6 @@
 # dartInformative
 dart공시정보를 활용한 투자 종목 추천
-https://dart.fss.or.kr/  에서 보고서 명이 아래 해당 공시명인 경우 Slack으로 연동하는 AWS Lamda 호출하여 알림
+https://dart.fss.or.kr/ 의 보고서 명이 아래 해당 공시명인 경우 Slack 연동하는 AWS Lamda 호출하여 알림
 - '신규시설투자등//신규시설투자등(자율공시)'  
 - '주요사항보고서(무상증자결정)'  
 
