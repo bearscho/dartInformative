@@ -32,7 +32,7 @@ today = datetime.now(timezone('Asia/Seoul'))
 
 kstYMD = today.strftime('%Y%m%d')
 print(kstYMD)
-#kstYMD = "20230308"
+#kstYMD = "20230320"  
 
 
 searchStrs = ['신규시설투자등//신규시설투자등(자율공시)', '주요사항보고서(무상증자결정)']
