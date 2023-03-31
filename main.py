@@ -91,7 +91,7 @@ for search in searchStrs:
 
         # 회사명 추출
 
-        pattern2 = "style=\"cursor:pointer;\">(.*)</span></div>"
+        pattern2 = "style=\"cursor:pointer;\">(.*)</span>"
         c = re.findall(pattern2, res1)
         companyNm = c[0]
         # print(companyNm)
