@@ -5,7 +5,6 @@ import json
 from pytz import timezone
 from datetime import datetime
 
-
 def callAWSLamdaSlack(notiNm, notiUrl):
     # AWS Lamda slack 연동 호출
     url_l = "https://k75n5fmeyederwrh3z5bg3ryry0rqrko.lambda-url.us-east-2.on.aws/"
