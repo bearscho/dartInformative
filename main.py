@@ -10,6 +10,7 @@ def callAWSLamdaSlack(notiNm, notiUrl):
     url_l = "https://k75n5fmeyederwrh3z5bg3ryry0rqrko.lambda-url.us-east-2.on.aws/"
 
     payload_l = json.dumps({
+        "notiChannel": "C03JYL598H5",
         "notiNm": notiNm,
         "notiUrl": notiUrl
     })
