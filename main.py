@@ -94,7 +94,7 @@ for search in searchStrs:
         pattern2 = "style=\"cursor:pointer;\">(.*)</span>"
         c = re.findall(pattern2, res1)
         companyNm = c[0]
-        # print(companyNm)
+        # print(companyNm) 
 
         # https://dart.fss.or.kr/report/viewer.do?rcpNo=20230228900646&dcmNo=9028761&eleId=0&offset=0&length=0&dtd=HTML
 
