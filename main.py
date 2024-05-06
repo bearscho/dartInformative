@@ -99,7 +99,7 @@ for search in searchStrs:
         # https://dart.fss.or.kr/report/viewer.do?rcpNo=20230228900646&dcmNo=9028761&eleId=0&offset=0&length=0&dtd=HTML
 
         # reportUrl = "https://dart.fss.or.kr/report/viewer.do?rcpNo=" + rcpNo + "&dcmNo=" + dcmNo + "&eleId=0&offset=0&length=0&dtd=HTML"
-        # print(reportUrl)
+        # print(reportUrl) 
 
         notiNm = companyNm + "-" + search
         notiUrl = "https://dart.fss.or.kr/report/viewer.do?rcpNo=" + \
