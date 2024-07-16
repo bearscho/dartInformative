@@ -27,7 +27,6 @@ def callAWSLamdaSlack(notiNm, notiUrl):
     res_l = response_l.text
     print(res_l)
 
-
 today = datetime.now(timezone('Asia/Seoul'))
 
 kstYMD = today.strftime('%Y%m%d')
